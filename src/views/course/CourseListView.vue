@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-<!-- CourseListView.vue -->
-=======
->>>>>>> 54e8a26b20a2228b0dfacf1381928bf8acb32401
 <template>
   <div class="min-h-screen bg-gray-50">
     <Header></Header>
@@ -17,24 +13,17 @@
             :class="selectedRegion === region.value ? 'opacity-100' : 'opacity-70'"
           >
             <div class="w-14 h-14 rounded-full flex items-center justify-center">
-<<<<<<< HEAD
-              <img :src="region.icon" :alt="region.name" class="w-14 h-14 rounded-full" />
-=======
               <img
                 :src="region.icon"
                 :alt="region.name"
                 class="w-14 h-14 rounded-full object-cover"
               />
->>>>>>> 54e8a26b20a2228b0dfacf1381928bf8acb32401
             </div>
             <span class="text-sm">{{ region.name }}</span>
           </button>
         </div>
       </div>
 
-<<<<<<< HEAD
-      <CourseCard :selected-region="selectedRegion" />
-=======
       <!-- 코스 목록 제목 -->
       <div class="mb-6">
         <div class="flex justify-between items-center mt-5">
@@ -108,44 +97,11 @@
           </button>
         </div>
       </div>
->>>>>>> 54e8a26b20a2228b0dfacf1381928bf8acb32401
     </main>
   </div>
 </template>
 
 <script setup>
-<<<<<<< HEAD
-import { ref } from 'vue'
-import Header from '@/components/layout/Header.vue'
-import CourseCard from '@/components/course/CourseCard.vue'
-
-const selectedRegion = ref(null)
-
-const regions = [
-  { id: 1, name: '서울', value: 'seoul', icon: '/src/assets/images/LocalImage/seoul.jpg' }, // c
-  { id: 2, name: '인천', value: 'incheon', icon: '/src/assets/images/LocalImage/incheon.jpg' },
-  { id: 3, name: '대전', value: 'daejeon', icon: '/src/assets/images/LocalImage/daejeon.jpeg' }, // c
-  { id: 4, name: '대구', value: 'daegoo', icon: '/src/assets/images/LocalImage/daegu.jpg' },
-  { id: 5, name: '광주', value: 'gwangjoo', icon: '/src/assets/images/LocalImage/gwangjoo.jpeg' }, //c
-  { id: 6, name: '부산', value: 'boosan', icon: '/src/assets/images/LocalImage/boosan.jpeg' }, //c
-  { id: 7, name: '울산', value: 'ulsan', icon: '/src/assets/images/LocalImage/ulsan.jpg' },
-  { id: 8, name: '세종', value: 'saejong', icon: '/src/assets/images/LocalImage/saejong.jpg' },
-  { id: 9, name: '경기', value: 'gyunggi', icon: '/src/assets/images/LocalImage/gyeonggi.jpg' }, //여기부터 데이터 31
-  { id: 10, name: '강원', value: 'gangwon', icon: '/src/assets/images/LocalImage/gangwon.jpg' },
-  { id: 11, name: '충북', value: 'chungbuk', icon: '/src/assets/images/LocalImage/chungbuk.jpg' },
-  { id: 12, name: '충남', value: 'chungnam', icon: '/src/assets/images/LocalImage/chungnam.jpg' },
-  { id: 13, name: '경북', value: 'gyungbuk', icon: '/src/assets/images/LocalImage/gyeongbuk.jpg' },
-  { id: 14, name: '경남', value: 'gyungnam', icon: '/src/assets/images/LocalImage/gyeongnam.jpg' },
-  { id: 15, name: '전북', value: 'jeonbuk', icon: '/src/assets/images/LocalImage/jeonbuk.jpeg' },
-  { id: 16, name: '전남', value: 'jeonnam', icon: '/src/assets/images/LocalImage/jeonnam.jpeg' },
-  { id: 17, name: '제주', value: 'jeju', icon: '/src/assets/images/LocalImage/jeju.jpeg' }, //c
-  // 필요한 지역들 추가
-]
-
-const handleRegionSelect = (region) => {
-  selectedRegion.value = region
-}
-=======
 import { ref, computed, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
 import Header from '@/components/layout/Header.vue'
@@ -261,5 +217,4 @@ const initializeRegion = () => {
 onMounted(() => {
   initializeRegion()
 })
->>>>>>> 54e8a26b20a2228b0dfacf1381928bf8acb32401
 </script>

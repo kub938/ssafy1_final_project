@@ -1,12 +1,4 @@
 <template>
-<<<<<<< HEAD
-  <div class="login-container">
-    <div class="logo-section">
-      <img src="@/assets/images/logo.png" alt="여행꼭꼭 로고" class="logo" />
-    </div>
-    <p class="subtitle">함께 여행을 떠나봐요</p>
-    <div class="login-buttons">
-=======
   <div
     class="min-h-screen flex flex-col items-center justify-center px-4 bg-gradient-to-b from-white to-gray-50"
   >
@@ -28,7 +20,6 @@
 
     <!-- 로그인 버튼 -->
     <div class="w-full max-w-sm px-4 animate-fade-in-up delay-300">
->>>>>>> 54e8a26b20a2228b0dfacf1381928bf8acb32401
       <KakaoLoginButton />
     </div>
   </div>
@@ -38,65 +29,6 @@
 import KakaoLoginButton from '@/components/auth/KakaoLoginButton.vue'
 </script>
 
-<<<<<<< HEAD
-<style scoped>
-.login-container {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  padding: 20px;
-  background-color: white;
-}
-
-.logo-section {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin-bottom: 20px;
-}
-
-.logo {
-  width: 400px;
-  height: 400px;
-  margin-bottom: 12px;
-  object-fit: contain; /* 이미지 비율 유지 */
-}
-
-.logo-text {
-  font-size: 24px;
-  font-weight: bold;
-  color: #000;
-}
-
-.subtitle {
-  font-size: 16px;
-  color: #666;
-  margin-bottom: 40px;
-}
-
-.login-buttons {
-  width: 100%;
-  max-width: 320px;
-}
-
-/* 모바일 대응을 위한 미디어 쿼리 추가 */
-@media (max-width: 768px) {
-  .logo {
-    width: 64px;
-    height: 64px;
-  }
-
-  .logo-text {
-    font-size: 20px;
-  }
-
-  .subtitle {
-    font-size: 14px;
-    margin-bottom: 32px;
-  }
-=======
 <style>
 @keyframes fade-in {
   from {
@@ -132,6 +64,5 @@ import KakaoLoginButton from '@/components/auth/KakaoLoginButton.vue'
 
 .delay-300 {
   animation-delay: 300ms;
->>>>>>> 54e8a26b20a2228b0dfacf1381928bf8acb32401
 }
 </style>

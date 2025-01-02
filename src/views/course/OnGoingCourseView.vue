@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-<script setup></script>
-
-<template></template>
-
-<style></style>
-=======
 <template>
   <div class="min-h-screen bg-gray-50">
     <Header></Header>
@@ -291,4 +284,3 @@ fetchCourses()
   overflow: hidden;
 }
 </style>
->>>>>>> 54e8a26b20a2228b0dfacf1381928bf8acb32401

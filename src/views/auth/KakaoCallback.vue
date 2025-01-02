@@ -4,8 +4,6 @@
       {{ error }}
     </div>
     <div v-else class="loading-message">카카오 로그인 처리 중...</div>
-<<<<<<< HEAD
-=======
 
     <!-- 환영 모달 -->
     <div
@@ -26,7 +24,6 @@
         </div>
       </div>
     </div>
->>>>>>> 54e8a26b20a2228b0dfacf1381928bf8acb32401
   </div>
 </template>
 
@@ -38,12 +35,9 @@ import { useAuthStore } from '@/stores/auth'
 const router = useRouter()
 const auth = useAuthStore()
 const error = ref(null)
-<<<<<<< HEAD
-=======
 const showWelcomeModal = ref(false)
 const userName = ref('')
 const isNewUser = ref(false)
->>>>>>> 54e8a26b20a2228b0dfacf1381928bf8acb32401
 
 onMounted(async () => {
   const code = new URL(window.location.href).searchParams.get('code')
@@ -56,17 +50,6 @@ onMounted(async () => {
 
   try {
     const data = await auth.handleKakaoCallback(code)
-<<<<<<< HEAD
-    // 로그인 성공 후 메인 페이지로 이동
-    console.log(1243);
-    router.push({
-      path: '/',
-      query: {
-        loginSuccess: true,
-        isNew: data.isNew,
-      },
-    })
-=======
 
     // 유저 정보 설정 및 모달 표시
     userName.value = auth.user?.nickname || '게스트'
@@ -84,7 +67,6 @@ onMounted(async () => {
         },
       })
     }, 2000)
->>>>>>> 54e8a26b20a2228b0dfacf1381928bf8acb32401
   } catch (err) {
     error.value = err.message
     setTimeout(() => router.push('/'), 3000)
@@ -110,8 +92,6 @@ onMounted(async () => {
   color: #f44336;
   font-size: 1.2em;
 }
-<<<<<<< HEAD
-=======
 
 /* 모달 애니메이션 */
 .modal-enter-active,
@@ -123,5 +103,4 @@ onMounted(async () => {
 .modal-leave-to {
   opacity: 0;
 }
->>>>>>> 54e8a26b20a2228b0dfacf1381928bf8acb32401
 </style>

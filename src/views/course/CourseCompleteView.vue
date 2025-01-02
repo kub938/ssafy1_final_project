@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-<script setup></script>
-
-<template></template>
-
-<style></style>
-=======
 <template>
   <div class="min-h-screen bg-gray-50">
     <Header></Header>
@@ -238,4 +231,3 @@ const goToPage = (page) => {
 // 초기 데이터 로드
 fetchCourses()
 </script>
->>>>>>> 54e8a26b20a2228b0dfacf1381928bf8acb32401

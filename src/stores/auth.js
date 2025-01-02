@@ -3,13 +3,10 @@ import { defineStore } from 'pinia'
 import { ref, watch } from 'vue'
 import axios from 'axios'
 
-<<<<<<< HEAD
-=======
 const redirect_uri = import.meta.env.VITE_KAKAO_REDIRECT_URI
 const kakaoId = import.meta.env.VITE_KAKAO_CLIENT_ID
 const api_url = import.meta.env.VITE_API_URL
 
->>>>>>> 54e8a26b20a2228b0dfacf1381928bf8acb32401
 export const useAuthStore = defineStore('auth', () => {
   // localStorage에서 초기 상태를 가져옴
   const user = ref(JSON.parse(localStorage.getItem('user')) || null)
@@ -18,11 +15,7 @@ export const useAuthStore = defineStore('auth', () => {
 
   // Axios 인스턴스 생성
   const api = axios.create({
-<<<<<<< HEAD
-    baseURL: 'http://localhost:8080/api',
-=======
     baseURL: api_url,
->>>>>>> 54e8a26b20a2228b0dfacf1381928bf8acb32401
     withCredentials: true,
   })
 
@@ -57,13 +50,8 @@ export const useAuthStore = defineStore('auth', () => {
   })
 
   const loginWithKakao = () => {
-<<<<<<< HEAD
-    const KAKAO_CLIENT_ID = '659a1fb9c5d56f43fad03fbe7ca24eb1'
-    const KAKAO_REDIRECT_URI = 'http://localhost:3000/oauth/kakao/callback'
-=======
     const KAKAO_CLIENT_ID = kakaoId
     const KAKAO_REDIRECT_URI = redirect_uri + '/oauth/kakao/callback'
->>>>>>> 54e8a26b20a2228b0dfacf1381928bf8acb32401
     const kakaoAuthUrl = `https://kauth.kakao.com/oauth/authorize?client_id=${KAKAO_CLIENT_ID}&redirect_uri=${KAKAO_REDIRECT_URI}&response_type=code`
     window.location.href = kakaoAuthUrl
   }

@@ -2,11 +2,7 @@
   <div class="city-grid">
     <router-link
       :to="{
-<<<<<<< HEAD
-        name: 'CourseList',
-=======
         name: 'CourseListByCity',
->>>>>>> 54e8a26b20a2228b0dfacf1381928bf8acb32401
         params: { cityId: cityData.id },
       }"
       class="city-block"

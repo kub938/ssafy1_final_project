@@ -3,41 +3,6 @@ import { defineStore } from 'pinia'
 import { ref } from 'vue'
 import axios from 'axios'
 
-<<<<<<< HEAD
-export const useCourseStore = defineStore('course', () => {
-  const api = axios.create({
-    baseURL: '/api',
-    withCredentials: true,
-  })
-
-  const fetchCourseDetail = async (courseId) => {
-    try {
-      const response = await api.get(`/courses/${courseId}`)
-      return response.data
-    } catch (error) {
-      console.error('API Error:', error)
-      throw error
-    }
-  }
-
-  const verifyPlace = async (courseId, placeId, type = 'location') => {
-    try {
-      await api.post(`/courses/${courseId}/places/${placeId}/verify`, {
-        type: type,
-      })
-    } catch (error) {
-      console.error('인증 실패:', error)
-      throw error
-    }
-  }
-
-  const completeCourse = async (courseId) => {
-    try {
-      await api.post(`/courses/${courseId}/complete`)
-    } catch (error) {
-      console.error('코스 완주 처리 실패:', error)
-      throw error
-=======
 const api_url = 'https://tripggukgguk.site/api'
 // axios 인스턴스 생성 (baseURL 설정)
 const api = axios.create({
@@ -104,16 +69,10 @@ export const useCourseStore = defineStore('course', () => {
       throw err
     } finally {
       loading.value = false
->>>>>>> 54e8a26b20a2228b0dfacf1381928bf8acb32401
     }
   }
 
   return {
-<<<<<<< HEAD
-    fetchCourseDetail,
-    verifyPlace,
-    completeCourse,
-=======
     courses,
     courseDetail,
     loading,
@@ -121,6 +80,5 @@ export const useCourseStore = defineStore('course', () => {
     currentPage,
     fetchCourses,
     fetchCourseDetail,
->>>>>>> 54e8a26b20a2228b0dfacf1381928bf8acb32401
   }
 })

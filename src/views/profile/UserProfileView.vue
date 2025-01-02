@@ -12,10 +12,7 @@
 import { ref, onMounted } from 'vue'
 import axios from 'axios'
 
-<<<<<<< HEAD
-=======
 const api_url = 'https://tripggukgguk.site/api'
->>>>>>> 54e8a26b20a2228b0dfacf1381928bf8acb32401
 const profile = ref(null)
 const loading = ref(false)
 const error = ref(null)
@@ -25,11 +22,7 @@ const fetchProfile = async () => {
   error.value = null
 
   try {
-<<<<<<< HEAD
-    const response = await axios.get('http://localhost:8080/api/users/me', {
-=======
     const response = await axios.get(api_url + '/users/me', {
->>>>>>> 54e8a26b20a2228b0dfacf1381928bf8acb32401
       withCredentials: true, // 쿠키 전송을 위해 필요
     })
 

@@ -1,10 +1,3 @@
-<<<<<<< HEAD
-<script setup></script>
-
-<template></template>
-
-<style></style>
-=======
 <template>
   <div>
     <!-- 로딩 상태 -->
@@ -150,4 +143,3 @@ watch(
   overflow: hidden;
 }
 </style>
->>>>>>> 54e8a26b20a2228b0dfacf1381928bf8acb32401
